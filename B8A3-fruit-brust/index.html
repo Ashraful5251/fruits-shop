@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/05b207dd47.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="navbar bg-[#F85559] rounded-full">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </label>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+
+            <li><a>Item 1</a></li>
+            <li>
+              <a>Parent</a>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </li>
+            <li><a>Item 3</a></li>
+            <div class="form-control relative">
+              <input
+                type="text"
+                placeholder="Search"
+                class="input input-bordered w-24 md:w-auto rounded-full bg-light"
+              />
+              <i
+                class="fa-solid fa-magnifying-glass absolute top-0 right-0"
+              ></i>
+            </div>
+          </ul>
+        </div>
+        <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a>Item 1</a></li>
+          <li tabindex="0">
+            <details>
+              <summary>Parent</summary>
+              <ul class="p-2">
+                <li><a>Submenu 1</a></li>
+                <li><a>Submenu 2</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a>Item 3</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <div class="form-control relative">
+          <input
+            type="text"
+            placeholder="Search"
+            class="input input-bordered w-24 md:w-auto rounded-full bg-[#fff]"
+          />
+          <i
+            class="fa-solid fa-magnifying-glass absolute top-0 right-0 me-4 mt-4"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- corousel -->
+
+    <div class="carousel w-full">
+      <div id="slide1" class="carousel-item relative w-full">
+        <img src="./banner1.png" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide4" class="btn btn-circle">❮</a>
+          <a href="#slide2" class="btn btn-circle">❯</a>
+        </div>
+        <div class="absolute w-68 text-center inset-x-64 inset-y-40">
+          <h1 class="text-[#fff] p-2 text-7xl font-extrabold">
+            Exotic tastes at your <br />doorstep
+          </h1>
+          <p class="text-[#fff] font-medium text-sm">
+            We supply highly quality organic products
+          </p>
+          <button class="btn btn-active mt-4 bg-[#F85559] text-[#fff] border-0">
+            Shop Now
+          </button>
+        </div>
+      </div>
+      <div id="slide2" class="carousel-item relative w-full">
+        <img src="./banner1.png" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide1" class="btn btn-circle">❮</a>
+          <a href="#slide3" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide3" class="carousel-item relative w-full">
+        <img src="./banner1.png" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide2" class="btn btn-circle">❮</a>
+          <a href="#slide4" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+      <div id="slide4" class="carousel-item relative w-full">
+        <img src="./banner1.png" class="w-full" />
+        <div
+          class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2"
+        >
+          <a href="#slide3" class="btn btn-circle">❮</a>
+          <a href="#slide1" class="btn btn-circle">❯</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:px-[240px] bg-[#fff] py-4 text text-black">
+      <div class="flex flex-col lg:flex-row">
+        <div class="basis-1/2">
+          <h1 class="text-5xl">Deal of the day</h1>
+          <p class="text-base">
+            Contrary to popular belief, is not simply random text. It has roots
+            in a piece of classical Latin literature from 45 BC, making it over
+            2000 years old.
+          </p>
+        </div>
+        <div class="basis-1/2">
+          <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 15"
+                  ><img src="./Frame (1).svg" alt=""
+                /></span>
+              </span>
+              days
+            </div>
+            <div class="flex">
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value: 10"></span>
+                </span>
+                hours
+              </div>
+              <div>
+                <img src="./Frame (1).svg" alt="" />
+              </div>
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 24"></span>
+              </span>
+              min
+            </div>
+            <div class="flex flex-col">
+              <span class="countdown font-mono text-5xl">
+                <span style="--value: 44"></span>
+              </span>
+              sec
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-[15px] pt-4">
+        <div class="card w-96 glass">
+          <figure>
+            <img src="./fruit6.png" class="py-3" alt="car!" />
+          </figure>
+          <div class="card-body text-center">
+            <h2 class="card-title flex justify-center">Life hack</h2>
+            <p>How to park your car at your garage?</p>
+            <div>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="card-actions justify-center">
+              <a href="#my_modal_6" class="">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal text-center" id="my_modal_6">
+          <div class="modal-box text-center">
+            <h3 class="font-bold text-lg">Exotic tastes at your doorstep</h3>
+            <figure class="flex justify-center">
+              <img src="./fruit6.png" alt="car!" />
+            </figure>
+            <p class="py-4">This modal works with anchor links</p>
+            <div class="modal-action flex justify-center">
+              <a href="#" class="btn">Cancel</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card w-96 glass">
+          <figure>
+            <img src="./fruit7.png" alt="car!" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Life hack</h2>
+            <p>How to park your car at your garage?</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary">Learn now!</button>
+            </div>
+          </div>
+        </div>
+        <div class="card w-96 glass">
+          <figure>
+            <img src="./fruit8.png" alt="car!" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Life hack</h2>
+            <p>How to park your car at your garage?</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary">Learn now!</button>
+            </div>
+          </div>
+        </div>
+        <div class="card w-96 glass">
+          <figure>
+            <img src="./fruit9.png" alt="car!" />
+          </figure>
+          <div class="card-body">
+            <h2 class="card-title">Life hack</h2>
+            <p>How to park your car at your garage?</p>
+            <div class="card-actions justify-end">
+              <button class="btn btn-primary">Learn now!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-red-950">
+      <div>
+        <h3>Meet the team section</h3>
+        <p>
+          Contrary to popular belief, is not simply random text. It has roots in
+          a piece of classical Latin literature from 45 BC, making it over 2000
+          years old.
+        </p>
+      </div>
+      <div class="flex justify-between px-5">
+        <div class="text-center">
+          <img src="./member1.png" alt="" />
+          <h1>Awlad Hossain</h1>
+          <p>Fruits Expert</p>
+          <div class="flex gap-1.5">
+            <img src="/images/svg/facebook 1 (1).svg" alt="" />
+            <img src="/images/svg/twitter (1) 1.svg" alt="" />
+            <img src="/images/svg/linkedin 1 (1).svg" alt="" />
+          </div>
+        </div>
+        <div>
+          <img src="./member2.png" alt="" />
+          <h1>Safia Chowdhury</h1>
+          <p>Fruits Expert</p>
+          <div class="flex gap-1.5">
+            <img src="/images/svg/facebook 1 (1).svg" alt="" />
+            <img src="/images/svg/twitter (1) 1.svg" alt="" />
+            <img src="/images/svg/linkedin 1 (1).svg" alt="" />
+          </div>
+        </div>
+        <div>
+          <img src="./member3.png" alt="" />
+          <h1>Rokib Hossain</h1>
+          <p>Fruits Expert</p>
+          <div>
+            <div class="flex gap-1.5">
+              <img src="/images/svg/facebook 1 (1).svg" alt="" />
+              <img src="/images/svg/twitter (1) 1.svg" alt="" />
+              <img src="/images/svg/linkedin 1 (1).svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src="./member4.png" alt="">
+          <h1>Rokib Hossain</h1>
+          <p>Fruits Expert</p>
+          <div>
+            <div class="flex gap-1.5">
+              <img src="/images/svg/facebook 1 (1).svg" alt="" />
+              <img src="/images/svg/twitter (1) 1.svg" alt="" />
+              <img src="/images/svg/linkedin 1 (1).svg" alt="" />
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
